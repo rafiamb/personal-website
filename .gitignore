@@ -1,0 +1,11 @@
+# Ignore system files
+.DS_Store
+
+# Ignore any local dev dependencies (not needed for pure HTML/CSS/JS)
+node_modules/
+
+# Ignore any large files you don’t want on GitHub
+# Example: videos, archives
+*.mp4
+*.mov
+*.zip
