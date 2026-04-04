@@ -52,7 +52,7 @@ if (track && slides.length && leftArrow && rightArrow) {
 }
 
 // Typewriter hero title
-const titles = ["data scientist", "programmer", "data analyst", "content creator", "problem solver"];
+const titles = ["programmer", "data analyst", "creative designer", "problem solver"];
 const titleEl = document.getElementById("hero-title");
 let titleIndex = 0;
 let currentText = titles[0];
