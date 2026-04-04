@@ -16,11 +16,12 @@
         <section id="hero" class="hero">
             <div class="container hero-grid">
                 <div class="hero-text">
-                    <h1 class="hero-greeting">hi, i'm rafia.</h1>
-                    <h3 class="hero-title">data scientist</h3>
+                    <h1 class="hero-greeting">hi, i'm rafia</h1>
+                    <h3 class="hero-title" id="hero-title">data scientist<span class="cursor">|</span></h3>
                     <p class="hero-description">
-                        I'm a programmer based in Philadelphia. I love being challenged creatively and using code to bring my ideas to life! I’m also fascinated by large-scale products and measuring their impact.
+                        I'm a programmer based in Philadelphia. I love being challenged creatively and using code to bring my ideas to life! I'm also fascinated by large-scale products and measuring their impact.
                     </p>
+                    <a href="/cdn-cgi/l/email-protection#90e2f1f6f9f1fdfff2f1e3f8f9e2f1d0f7fdf1f9fcbef3fffd" class="hero-cta">get in touch</a>
                 </div>
 
                 <div class="hero-visual">
@@ -37,7 +38,9 @@
                         <h1 class="about-title">ABOUT ME</h1>
                     </div>
                     <div class="about-image">
-                        <img src="assets/profile.jpg" alt="Profile Picture">
+                        <div class="about-image-inner">
+                            <img src="assets/profile.jpg" alt="Profile Picture">
+                        </div>
                     </div>
                 </div>
 
@@ -47,7 +50,7 @@
                             I am currently a full-time Computer Science & Economics student at Yale University. Through coursework and hands-on projects, I developed a foundation in data analysis, programming, and problem-solving.
                         </p>
                         <p class="about-t2">
-                            Here are some of the technical skills I’ve been working with:
+                            Here are some of the technical skills I've been working with:
                         </p>
 
                         <div class="about-skills-row">
@@ -79,7 +82,7 @@
                         <div class="carousel-item">
                             <img src="assets/mc_1.jpg" alt="Project 1" class="carousel-image">
                             <div class="carousel-text">
-                                <h2 class="project-title">project name here</h2>
+                                <h2 class="project-title">Spin</h2>
                                 <p class="project-description">
                                     include a description of the project here. really impress the people that are scrolling through.
                                 </p>
@@ -90,7 +93,7 @@
                         <div class="carousel-item">
                             <img src="assets/mc_2.jpg" alt="Project 2" class="carousel-image">
                             <div class="carousel-text">
-                                <h2 class="project-title">project name here</h2>
+                                <h2 class="project-title">PriceIt</h2>
                                 <p class="project-description">
                                     include a description of the project here. really impress the people that are scrolling through.
                                 </p>
@@ -101,7 +104,7 @@
                         <div class="carousel-item">
                             <img src="assets/mc_3.png" alt="Project 3" class="carousel-image">
                             <div class="carousel-text">
-                                <h2 class="project-title">project name here</h2>
+                                <h2 class="project-title">Ecommerce Analyst Agent</h2>
                                 <p class="project-description">
                                     include a description of the project here. really impress the people that are scrolling through.
                                 </p>
@@ -128,69 +131,82 @@
                 <div class="project-gallery">
                     <div class="project-card">
                         <div class="project-card-text">
-                            <h2 class="project-name">2048 Minimax Agent</h2>
+                            <h2 class="project-name">Spin</h2>
                             <p class="project-details">
-                                include a description of the project here. really impress the people that are scrolling through.
+                                A music recommender that finds sonically similar tracks using KNN with a GPT-4o-mini fallback.
                             </p>
                             <p class="project-side">
-                                coding languages used
+                                Python (FastAPI), HTML/CSS, Javascript
                             </p>
                         </div>
 
                         <div class="card-icon">
-                            <img src="assets/github.svg" alt="github icon" class="github">
-                            <img src="assets/external.svg" alt="open external link icon" class="external">
+                            <a href="https://github.com/rafiamb/spin" target="_blank">
+                                <img src="assets/github.svg" alt="github icon" class="github">
+                            </a>
+                            <a href="https://spin-dmpk.onrender.com" target="_blank">
+                                <img src="assets/external.svg" alt="open external link icon" class="external">
+                            </a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-card-text">
-                            <h2 class="project-name">enter project name</h2>
+                            <h2 class="project-name">PriceIt</h2>
                             <p class="project-details">
-                                include a description of the project here. really impress the people that are scrolling through.
+                                An Airbnb pricing tool that predicts competitive nightly rates for Chicago listings using XGBoost trained on web scraped listings.
                             </p>
                             <p class="project-side">
-                                coding languages used
+                                Python (FastAPI), HTML/CSS, Javascript
                             </p>
                         </div>
 
                         <div class="card-icon">
-                            <img src="assets/github.svg" alt="github icon" class="github">
-                            <img src="assets/external.svg" alt="open external link icon" class="external">
+                            <a href="https://github.com/rafiamb/PriceIt" target="_blank">
+                                <img src="assets/github.svg" alt="github icon" class="github">
+                            </a>
+                            <a href="https://priceit.onrender.com/" target="_blank">
+                                <img src="assets/external.svg" alt="open external link icon" class="external">
+                            </a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-card-text">
-                            <h2 class="project-name">enter project name</h2>
+                            <h2 class="project-name">2048 AI Agents</h2>
                             <p class="project-details">
-                                include a description of the project here. really impress the people that are scrolling through.
+                                A head-to-head comparison of Monte Carlo Tree Search and Expectimax agents on a 3×3 variant of 2048.
                             </p>
                             <p class="project-side">
-                                coding languages used
+                                Python
                             </p>
                         </div>
 
                         <div class="card-icon">
-                            <img src="assets/github.svg" alt="github icon" class="github">
-                            <img src="assets/external.svg" alt="open external link icon" class="external">
+                            <a href="https://github.com/rafiamb/2048-mcts-expectimax" target="_blank">
+                                <img src="assets/github.svg" alt="github icon" class="github">
+                            </a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-card-text">
-                            <h2 class="project-name">enter project name</h2>
+                            <h2 class="project-name">Ecommerce Analyst Agent</h2>
                             <p class="project-details">
-                                include a description of the project here. really impress the people that are scrolling through.
+                                A conversational AI agent that lets you query 100,000+ Brazilian e-commerce orders in plain English.
                             </p>
                             <p class="project-side">
-                                coding languages used
+                                Python (Streamlit)
                             </p>
                         </div>
 
                         <div class="card-icon">
-                            <img src="assets/github.svg" alt="github icon" class="github">
-                            <img src="assets/external.svg" alt="open external link icon" class="external">
+                            <a href="https://github.com/rafiamb/ecommerce-analytics-agent" target="_blank">
+                                <img src="assets/github.svg" alt="github icon" class="github">
+                            </a>
+                            <a href="https://olist-agent.streamlit.app/" target="_blank">
+                                <img src="assets/external.svg" alt="open external link icon" class="external">
+                            </a>
                         </div>
                     </div>
 
@@ -243,7 +259,7 @@
             <img src="assets/projects.svg" alt="" class="projects-icon">
         </a>
         <img src="assets/line.svg" alt="divider" class="line1">
-        <a href="mailto:rafiamobashira@gmail.com" aria-label="Contact">
+        <a href="/cdn-cgi/l/email-protection#037162656a626e6c6162706b6a716243646e626a6f2d606c6e" aria-label="Contact">
             <img src="assets/mail.svg" alt="" class="contact">
         </a>
         <a href="https://www.linkedin.com/in/rafiamobashira"
