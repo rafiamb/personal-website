@@ -78,19 +78,32 @@ body.dark .hero-greeting {
     display: inline-block;
     margin-top: 24px;
     padding: 12px 28px;
-    background-color: #34B1E9;
-    color: #fff;
+    background-color: transparent;
+    color: #34B1E9;
     font-size: 16px;
     font-weight: 500;
     border-radius: 30px;
+    border: 2px solid #34B1E9;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
     width: fit-content;
 }
 
 .hero-cta:hover {
-    background-color: #1a9fd4;
     transform: translateY(-2px);
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(52, 177, 233, 0.4),
+                    0 0 20px rgba(52, 177, 233, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 16px rgba(52, 177, 233, 0.8),
+                    0 0 40px rgba(52, 177, 233, 0.4),
+                    0 0 60px rgba(52, 177, 233, 0.15);
+    }
 }
 
 .cursor {
@@ -111,6 +124,7 @@ body.dark .hero-greeting {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 220px;
 }
 
 .about-grid {
@@ -202,8 +216,10 @@ body.dark .about-title {
 }
 
 .about-right {
+    display: grid;
+    grid-template-columns: repeat(12,);
     grid-column: 5 / -1;
-    margin-top: 108px;
+    margin-top: 96px;
 }
 
 .about-right-text {
@@ -287,11 +303,10 @@ body.dark .projects-text {
 .carousel-item::after {
     content: "";
     position: absolute;
-    inset: 0; /* top:0; right:0; bottom:0; left:0 */
-    background-color: rgba(31, 41, 51, 0.5); /* color + opacity */
-    border-radius: 30px; /* matches image if rounded */
-    pointer-events: none; /* clicks pass through */
-    z-index: 1; /* sits above image, below text/arrows */
+    inset: 0;
+    background-color: rgba(31, 41, 51, 0.5);
+    pointer-events: none; 
+    z-index: 1; 
 }
 
 .carousel-image {
@@ -303,7 +318,7 @@ body.dark .projects-text {
 
 .carousel-text {
     position: absolute;
-    bottom: 32px;
+    bottom: 64px;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
@@ -322,7 +337,7 @@ body.dark .projects-text {
     font-size: 14px;
     font-weight: 500;
     opacity: 0.7;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .carousel-arrow {
@@ -347,9 +362,10 @@ body.dark .projects-text {
 }
 
 .carousel .skill-card {
-    font-size: 14px;
+    font-size: 12px;
     background-color: rgba(56, 189, 248, 0.8);
     border: 2px solid rgba(0,0,0,0.1);
+
 }
 
 .carousel-dots {
@@ -586,7 +602,7 @@ body.dark .line2 {
 
     .about-right {
         grid-column: 6 / -1;
-        margin-top: 80px;
+        margin-top: 96px;
     }
 
     .about-title {
@@ -680,6 +696,11 @@ body.dark .line2 {
 
     .carousel-text {
         top: 260px;
+    }
+
+    .carousel-dots {
+        width: 100%;
+        justify-content: center;
     }
 
     .project-title {
