@@ -219,7 +219,7 @@ body.dark .about-title {
     display: grid;
     grid-template-columns: repeat(12,);
     grid-column: 5 / -1;
-    margin-top: 96px;
+    margin-top: 92px;
 }
 
 .about-right-text {
@@ -602,7 +602,7 @@ body.dark .line2 {
 
     .about-right {
         grid-column: 6 / -1;
-        margin-top: 96px;
+        margin-top: 92px;
     }
 
     .about-title {
