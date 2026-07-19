@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rebuilding —</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-raised: #11161d;
+    --text: #c9d1d9;
+    --dim: #6e7681;
+    --accent: #7ee787;
+    --accent-dim: #2f6f45;
+    --border: #21262d;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'SF Mono', 'Menlo', 'Consolas', 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .terminal {
+    width: 100%;
+    max-width: 560px;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .titlebar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    background: #161b22;
+  }
+
+  .dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+  }
+  .dot.red { background: #ff5f56; }
+  .dot.yellow { background: #ffbd2e; }
+  .dot.green { background: #27c93f; }
+
+  .titlebar span {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--dim);
+  }
+
+  .body {
+    padding: 28px 24px 32px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .line { white-space: pre-wrap; }
+  .prompt { color: var(--accent); }
+  .path { color: #79c0ff; }
+  .comment { color: var(--dim); }
+
+  .bar-track {
+    margin: 18px 0 6px;
+    height: 6px;
+    background: #21262d;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    border-radius: 3px;
+    animation: fill 3.2s ease-in-out infinite;
+  }
+
+  @keyframes fill {
+    0% { width: 4%; }
+    60% { width: 78%; }
+    100% { width: 92%; }
+  }
+
+  .pct {
+    font-size: 12px;
+    color: var(--dim);
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background: var(--accent);
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  .footer {
+    margin-top: 22px;
+    font-size: 12px;
+    color: var(--dim);
+  }
+
+  .footer a {
+    color: var(--accent-dim);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent-dim);
+  }
+
+  .footer a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bar-fill, .cursor { animation: none; width: 60%; opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="terminal">
+    <div class="titlebar">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+      <span>build.log</span>
+    </div>
+    <div class="body">
+      <div class="line"><span class="prompt">$</span> npm run rebuild</div>
+      <div class="line comment">// portfolio v2 — restructuring, please hold</div>
+
+      <div class="bar-track"><div class="bar-fill"></div></div>
+      <div class="pct">compiling modules...</div>
+
+      <div class="line" style="margin-top: 18px;">
+        <span class="prompt">></span> this site is temporarily offline while I rebuild it.<span class="cursor"></span>
+      </div>
+
+      <div class="footer">
+        Reach me in the meantime at <a href="mailto:rafiamobashira@gmail.com">you@example.com</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
